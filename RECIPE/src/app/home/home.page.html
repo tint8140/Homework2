@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Recipe API </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="full" (click)="getRandomRecipe()"
+    >Get Random Recipe</ion-button
+  >
+  <p><input type="text" [(ngModel)]="leter" /></p>
+  <ion-button (click)="getRecipeByLetter(letter)" expand="full">
+    Get Recipe by Letter</ion-button
+  >
+  <ion-button (click)="getRecipeByName(name)" expand="full">
+    Get Recipe by Name</ion-button
+  >
+  <!-- <ion-button (click)="getRecipeByName()" expand="full">
+    Get Recipe by name</ion-button
+  > -->
+  <ion-list>
+    <ion-item
+      routeLink="/details/{{idx}}"
+      *ngFor="let recipe of recipes; let idx= index;"
+    >
+      {{recipe.strMeal}} {{idx}}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "RECIPE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
